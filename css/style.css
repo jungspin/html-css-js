@@ -1,0 +1,111 @@
+:root {
+    --main-table-bg-color: #F6F9FA;
+    --table-shadow-color: #E9ECED;
+    --table-thead-bg-color: #F3F5F6;
+    --table-head-text-color: #838383;
+    --table-content-text-color: #4c4c50;
+}
+
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* body {
+    font-family: 'SUITE-Regular', 'TheJamsil5Bold', 'consolas';
+} */
+
+header {
+    font-family: 'TheJamsil5Bold';
+    font-size: xx-large;
+    text-align: center;
+    /*글자 중앙정렬*/
+    margin: 1%;
+}
+
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+.mainContainer {
+    float: left;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.navContent {
+    width: 500px;
+    background-color: beige;
+}
+
+.tableContainer {
+    font-size: medium;
+    background-color: var(--main-table-bg-color);
+    padding: 10%;
+    flex: 1 0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    /*테두기 사이 간격 없애기, 테두리 설정*/
+    background-color: white;
+    box-shadow: 3px 3px 12px 3px var(--table-shadow-color), -3px -3px 12px 3px var(--table-shadow-color);
+    border-radius: 4px;
+}
+
+table th,
+table td {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: var(--table-thead-bg-color);
+    color: var(--table-head-text-color);
+
+}
+
+table td {
+    border-top: 2px solid var(--main-table-bg-color);
+}
+
+.tableLeftCorner {
+    border-top-left-radius: 4px;
+}
+
+.tableRightCorner {
+    border-top-right-radius: 4px;
+}
+
+
+tbody {
+    color: var(--table-content-text-color);
+}
+
+/* page 버튼 */
+.pageContainer {
+
+    background-color: white;
+    float: right;
+    text-align: center;
+    margin-top: 4px;
+}
