@@ -5,12 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+    <!-- <link rel="stylesheet" href="/css/bootstrap/bootstrap.css"> -->
 
     <title>Smaple</title>
 </head>
-
+<style>
+    .container{
+        width: 100%;
+        /* background-color: bisque; */
+        height: 100vh;
+        display: flex;
+    }
+    nav{
+        width: 20%;
+        height: 100%;
+        background-color: black;
+    }
+    .sub--container{
+        width: 80%;
+        height: 100%;
+        background-color: blue;
+        padding: 0;
+    }
+    header{
+        height: 80px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    section{
+        height: calc(100% - 80px);
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
 <body>
+    <div class="container">
+        <nav></nav>
+        <div class="sub--container">
+            <header>
+                <h1>Sample</h1>
+            </header>
+            <section>
+                <div id="tableBox">
+                    <table>
+                        <tr>
+                            <td>ddd</td>
+                        </tr>
+                    </table>
+                    <div id="pageBox"></div>
+                </div>
+            </section>
+        </div>
+    </div>
     <header>
         <div>
             <h1>Sample</h1>
@@ -41,20 +91,21 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>요청</td>
-                        <td>디자인</td>
-                        <td>신청합니다</td>
-                        <td>홍길동</td>
-                        <td>2024-01-01</td>
+                        <td><a href="" class="tableLink">1</a></td>
+                        <td><a href="" class="tableLink">요청</a></td>
+                        <td><a href="" class="tableLink">디자인</a></td>
+                        <td><a href="" class="tableLink">신청합니다</a></td>
+                        <td><a href="" class="tableLink">홍길동</a></td>
+                        <td><a href="" class="tableLink">2024-01-01</a></td>
+                    
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>완료</td>
-                        <td>방문</td>
-                        <td>신청합니다</td>
-                        <td>임꺽정</td>
-                        <td>2024-01-01</td>
+                        <td><a href="" class="tableLink">2</a></td>
+                        <td><a href="" class="tableLink">완료</a></td>
+                        <td><a href="" class="tableLink">방문</a></td>
+                        <td><a href="" class="tableLink">신청합니다</a></td>
+                        <td><a href="" class="tableLink">임꺽정</a></td>
+                        <td><a href="" class="tableLink">2024-01-01</a></td>
                     </tr>
                 </tbody>
             </table>

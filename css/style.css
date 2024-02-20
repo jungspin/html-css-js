@@ -20,19 +20,8 @@
     font-style: normal;
 }
 
-/* body {
-    font-family: 'SUITE-Regular', 'TheJamsil5Bold', 'consolas';
-} */
-
-header {
-    font-family: 'TheJamsil5Bold';
-    font-size: xx-large;
-    text-align: center;
-    /*글자 중앙정렬*/
-    margin: 1%;
-}
-
-body,
+/* 제일 기초적인 것이 항상 맨 위에 있어야 함! */
+html, body,
 ul,
 li {
     margin: 0;
@@ -40,17 +29,35 @@ li {
     list-style: none;
 }
 
+/* body {
+    font-family: 'SUITE-Regular', 'TheJamsil5Bold', 'consolas';
+} */
+
+/* header {
+    font-family: 'TheJamsil5Bold';
+    font-size: xx-large;
+    text-align: center; */
+    /*글자 중앙정렬*/
+    /* margin: 1%; */
+/* } */
+
+
+
+.tableLink {
+    text-decoration: none;
+    color: var(--table-content-text-color)
+}
+
 
 
 .mainContainer {
+    width: 100%;
     float: left;
     display: flex;
     flex-direction: row;
 }
 
-
 .navContent {
-    width: 500px;
     background-color: beige;
 }
 
