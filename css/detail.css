@@ -1,0 +1,47 @@
+.detail--container {
+    width: 80%;
+    background-color: mediumspringgreen;
+    display: block;
+    height: 100%;
+    
+}
+
+.detail--title {
+    background-color: pink;
+    display: flex;
+    flex-direction: row;
+}
+
+.detail--date {
+    background-color: yellow
+}
+
+/* 작성자란 */
+.detail--writer {
+    background-color: aqua;
+}
+
+.detail--label {
+    display: block;
+}
+
+.detail--input {
+    display: block;
+    border: 0;
+    padding: 1%;
+    border-bottom: 1px solid #838383;
+}
+
+.detail--content {
+    width: 100%;
+    height: 6.25rem;
+    background-color: lightsalmon
+}
+
+textarea {
+    width: 100%;
+    height: 20rem; 
+    border: none;
+    resize: none;
+}
+

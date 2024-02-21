@@ -1,0 +1,94 @@
+.table--content {
+    text-decoration: none;
+    color: var(--table-content-text-color);
+    cursor: pointer;
+}
+
+
+.navContent {
+    background-color: beige;
+}
+
+.tableContainer {
+    font-size: medium;
+    background-color: var(--main-table-bg-color);
+    padding: 10%;
+    flex: 1 0 auto;
+}
+
+table th,
+table td {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: var(--table-thead-bg-color);
+    color: var(--table-head-text-color);
+
+}
+
+table td {
+    border-top: 2px solid var(--main-table-bg-color);
+}
+
+.tableLeftCorner {
+    border-top-left-radius: 4px;
+}
+
+.tableRightCorner {
+    border-top-right-radius: 4px;
+}
+
+
+tbody {
+    color: var(--table-content-text-color);
+}
+
+/* page 버튼 */
+.pageContainer {
+    background-color: white;
+    float: right;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.page--button {
+    text-decoration: none;
+    color: #77818C
+}
+
+ /* 아이디 네이밍 룰 */
+#tableConsultingList {
+    width: 100%;
+    /* border-collapse: collapse;
+    /*테두기 사이 간격 없애기, 테두리 설정*/
+    background-color: white;
+    box-shadow: 3px 3px 12px 3px var(--table-shadow-color), -3px -3px 12px 3px var(--table-shadow-color);
+    border-radius: 4px;
+}
+
+section #tableBox {
+    display: block;
+    height: auto;
+}
+
+.bottom--content {
+    margin-top: 24px;
+    text-align: center;
+}
+
+
+#pageBox {
+    background-color: white;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    display: inline-block;
+}
+

@@ -1,27 +1,102 @@
- .main--container {
-     width: 100%;
-     /* background-color: bisque; */
-     height: 100vh;
-     display: flex;
- }
+:root {
+    --main-table-bg-color: #F6F9FA;
+    --table-shadow-color: #E9ECED;
+    --table-thead-bg-color: #F3F5F6;
+    --table-head-text-color: #838383;
+    --table-content-text-color: #4c4c50;
+}
 
- #sidebar {
-     width: 20%;
-     height: 100%;
-     background-color: #F6F6F6;
- }
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
 
- /* 클래스 네이밍 룰 */
- .sub--container {
-     width: 80%;
-     height: 100%;
-     padding: 0;
- }
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
 
- section {
-     height: calc(100% - 80px);
-     padding: 66px 68px 0;
-     /* display: flex; */
-     /* align-items: center;
-        justify-content: center; */
- }
+/* 제일 기초적인 것이 항상 맨 위에 있어야 함! */
+html,
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button {
+    /* 버튼 디폴트 스타일 없애기 */
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+body {
+    font-family: 'SUITE-Regular', 'TheJamsil5Bold', 'consolas';
+}
+
+
+header {
+    font-family: 'TheJamsil5Bold';
+    height: 80px;
+    background-color: #F58300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.main--container {
+    width: 100%;
+    /* background-color: bisque; */
+    height: 100vh;
+    display: flex;
+}
+
+#sidebar {
+    width: 20%;
+    height: 100%;
+    background-color: #F6F6F6;
+}
+
+/* 클래스 네이밍 룰 */
+.sub--container {
+    width: 80%;
+    height: 100%;
+    padding: 0;
+}
+
+section {
+    height: calc(100% - 80px);
+    padding: 66px 68px 0;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+}
+
+ul.breadcrumb li {
+    display: inline;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: var(--table-content-text-color);
+    content: "\003e";
+}
+
+ul.breadcrumb li a {
+    color: var(--table-content-text-color);
+    text-decoration: none;
+}
