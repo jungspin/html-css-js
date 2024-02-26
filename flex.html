@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            background-color: antiquewhite;
+            display: flex;
+            height: 300px;
+            /* flex-direction: column; */
+            /* flex-wrap: wrap; */
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #child1 {
+            background-color: aqua;
+        }
+        #child2 {
+            background-color: chartreuse;
+        }
+        #child3 {
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <!-- 플렉스 컨테이너 : 부모 요소 -->
+    <!-- 컨테이너가 flex의 영향을 받는 것이 전체 공간, 설정된 속성에 따라 각각의 아이템들이 어떤 형태로 배치되는 것 -->
+    <div class="container">
+        <!-- 플렉스 아이템 : 자식 요소 -->
+        <div class="item" id="child1">child1child1child1child1child1child1child1child1child1child1child1child1child1child1child1child1</div>
+        <div class="item" id="child2">child2</div>
+        <div class="item" id="child3">child3</div>
+    </div>
+</body>
+</html>
