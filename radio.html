@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="radio-group" id="radio-group">
+        <input type="radio" name="radio_item" id="select1" value="선택1">선택1
+        <input type="radio" name="radio_item" id="select2" value="선택2">선택2
+        <input type="radio" name="radio_item" id="selectNone" value="선택 안 함">선택 안 함
+    </div>
+
+    <button id="chkCheckedButton" onclick="chkCheckedButton()">
+        선택된 버튼 확인하기
+    </button>
+
+    <button id="chkUncheckedAll" onclick="chkUncheckedAll()">
+        선택된 버튼 해제
+    </button>
+
+    <button id="chkCheckedSomeone" onclick="chkCheckedSomeone()">
+        특정 버튼 선택하기
+    </button>
+   
+    <script>
+        function ctrlRadio(ctrlContent) {
+            let radioGroupList = document.getElementsByName('radio_item');
+
+            radioGroupList.forEach((item) => {
+                ctrlContent(item);
+                if (item.checked) {
+                    console.log(item.value + " is Clicked");
+                }
+            });
+        }
+        function chkCheckedButton() {
+            let radioGroupList = document.getElementsByName('radio_item');
+
+            radioGroupList.forEach((item) => {
+                if (item.checked) {
+                    console.log(item.value + " is Clicked");
+                }
+            });
+        }
+
+        function chkUncheckedAll() {
+            let radioGroupList = document.getElementsByName('radio_item');
+
+            radioGroupList.forEach((item) => {
+                item.checked = false;
+            });
+        }
+
+        function chkCheckedSomeone() {
+            let radioGroupList = document.getElementsByName('radio_item');
+
+            radioGroupList.forEach((item) => {
+                if (item.id == "selectNone") {
+                    item.checked = true;
+                } else {
+                    item.checked = false;
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
