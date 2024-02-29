@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .page-status-box {
+            position: relative;
+            display: block;
+        }
+
+        .page-status-button {
+            background-color: #4CAF50;
+            color: #212121;
+            padding: 10px 15px;
+            font-size: 15px;
+            font-weight: bold;
+            border: 2px solid transparent;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .page-status-content {
+            display: none;
+            font-size: 13px;
+            position: absolute;
+            z-index: 1;
+            min-width: 200px;
+            background-color: #212121;
+            border: 2px solid #4CAF50;
+            border-radius: 0px 15px 15px 15px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .page-status-content a {
+            color: #4CAF50;
+            padding: 8px 10px;
+            text-decoration: none;
+            display: block;
+            transition: 0.1s;
+        }
+
+        .page-status-content a:hover {
+            background-color: #4CAF50;
+            color: #212121;
+        }
+
+        .page-status-content a:focus {
+            background-color: #212121;
+            color: #4CAF50;
+        }
+
+        .page-status-content #request:hover {
+            border-radius: 0px 13px 0px 0px;
+        }
+
+        .page-status-content #complete:hover {
+            border-radius: 0px 0px 13px 13px;
+        }
+
+        .page-status-box:hover button {
+            border-radius: 15px 15px 0px 0px;
+        }
+
+        .page-status-box:hover .page-status-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-status-box">
+        <button class="page-status-button">Paste &nbsp; ▼</button>
+        <div class="page-status-content">
+            <a id="request" href="#" onclick="alert('ddd');">요청</a>
+            <a id="working" href="#">진행중</a>
+            <a id="complete" href="#">완료</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

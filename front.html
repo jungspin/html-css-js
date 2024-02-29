@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="item">
+        <div class="first">
+            hello
+        </div>
+
+    </div>
+
+
+    <div class="second">
+        bye
+    </div>
+
+    <div>
+        dfsdfdsf
+    </div>
+
+
+    <button onclick="location.href='/back.html';">
+        이동
+    </button>
+
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- jQuery에서 제공하는 3.5.1 버전의 jQuery CDN 호스트 -->
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script>
+        $(".first").on("click", function (e) {
+            console.log("first");
+            $(".item").eq(0).css("display", "none");
+            $(".item").eq(1).css("display", "block");
+        });
+        $(".second").on("click", function (e) {
+            console.log("second");
+            $(".item").eq(1).css("display", "none");
+            $(".item").eq(0).css("display", "block");
+            sessionStorage.clear();
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // 이전에 저장된 상태가 있는지 확인
+            var currentState = history.state;
+
+            // 저장된 상태가 있으면 필요한 작업 수행
+            console.log('저장된 상태 : ' + currentState.data);
+            let hosp = sessionStorage.getItem("hosp");
+            console.log('저장된 상태 : ' + hosp);
+        });
+
+        window.addEventListener('beforeunload', function () { // 사용자가 페이지를 떠날 때
+            // 상태저장
+            var stateToSave = { data: 'sample' };
+            history.replaceState(stateToSave, '');
+
+            sessionStorage.setItem("hosp", "true");
+        });
+
+        window.addEventListener('popstate', function (event) {
+            var restoreState = event.state;
+            console.log('Restoring state from popstate:', restoredState);
+        });
+    </script>
+</body>
+
+</html>
