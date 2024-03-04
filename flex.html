@@ -37,5 +37,77 @@
         <div class="item" id="child2">child2</div>
         <div class="item" id="child3">child3</div>
     </div>
+
+    <div class="item-content-box">
+        <div class="btn-box">
+            <input class="form-check-input" type="checkbox" value="LOGO" id="idLogoNone">
+            <label class="form-check-label" for="idLogoNone">
+                로고 없음
+            </label>
+        </div>
+        <div class="btn-box">
+            <input class="form-check-input" type="checkbox" value="HOSP_INFO" id="idHospInfoNone">
+            <label class="form-check-label" for="idHospInfoNone">
+                병원소개 없음
+            </label>
+        </div>
+        <div class="btn-box">
+            <input class="form-check-input" type="checkbox" value="MEDI_INFO" id="idMediInfoNone">
+            <label class="form-check-label" for="idMediInfoNone">
+                병원장 소개 없음
+            </label>
+        </div>
+        <div class="btn-box">
+            <input class="form-check-input" type="checkbox" value="PARKING" id="idParkNone">
+            <label class="form-check-label" for="idParkNone">
+                주차안내 없음
+            </label>
+        </div>
+        <div class="btn-box">
+            <input class="form-check-input" type="checkbox" value="FAST" id="idFastNone">
+            <label class="form-check-label" for="idFastNone">
+                전화 예약 없음
+            </label>
+        </div>
+        <div class="btn-box">
+            <input class="form-check-input" type="checkbox" value="TEL" id="idTelNone">
+            <label class="form-check-label" for="idTelNone">
+                전화번호 안내 없음
+            </label>
+        </div>
+        <div class="btn-box">
+            <input class="form-check-input" type="checkbox" value="MAP" id="idMapNone">
+            <label class="form-check-label" for="idMapNone">
+                오시는 길 없음
+            </label>
+        </div>
+    </div>
+
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- jQuery에서 제공하는 3.5.1 버전의 jQuery CDN 호스트 -->
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script>
+        $(".form-check-label").on('click', function () { 
+            var labelFor = $(this).attr("for");
+            var associatedInput = $("#" + labelFor); // 라벨과 연관된 input을 찾음
+            console.log(associatedInput.is(":checked"));
+
+            if (associatedInput.is(":checked")) {
+                associatedInput.prop("checked", false);
+            }
+
+            $('.form-check-input').each(function () {
+                if (elClickedCheckBox != this) {
+                    $(this).prop('checked', false);
+                }
+            })
+
+            var elClickedCheckBox = this;
+            console.log(associatedInput.val());
+            // SearchHosp('CFG', associatedInput.val()) // 검색하는 부분
+        });
+    </script>
 </body>
 </html>

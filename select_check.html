@@ -7,41 +7,58 @@
     <title>Document</title>
 
     <style>
+        .parent {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+        }
         .select-box-container {
             width: 20vw;
-            display: flex;
+            /* display: flex; */
             flex-direction: column;
+            height: 50vh;
         }
 
         .select-title {
             background-color: white;
             text-align: center;
         }
+
+        .select-item {
+            background-color: white;
+        }
     </style>
 </head>
 
-<body style="background-color: antiquewhite;">
-    <div class="select-box-container">
-        <div class="select-title" id="selectTitleBox" onclick="selectBoxClickListener();">
-            선택 🔽
+<body>
+    <div class="parent">
+        <div class="select-box-container" style="background-color: antiquewhite;">
+            <div class="select-title" id="selectTitleBox" onclick="selectBoxClickListener();">
+                선택 🔽
+            </div>
+            <div class="select-item-box" id="selectContentBox" style="display: none;">
+                <div class="select-item">
+                    <input type="checkbox" name="select-item-input" id="item1" value="value1">
+                    <label for="item1">check1</label>
+                </div>
+                <div class="select-item">
+                    <input type="checkbox" name="select-item-input" id="item2" value="value2">
+                    <label for="item2">check2</label>
+                </div>
+                <div class="select-item">
+                    <input type="checkbox" name="select-item-input" id="item3" value="value3">
+                    <label for="item3">check3</label>
+                </div>
+            </div>
+    
+    
         </div>
-        <div class="select-item-box" id="selectContentBox" style="display: none;">
-            <div class="select-item">
-                <input type="checkbox" name="select-item-input" id="item1" value="value1">
-                <label for="item1">check1</label>
-            </div>
-            <div class="select-item">
-                <input type="checkbox" name="select-item-input" id="item2" value="value2">
-                <label for="item2">check2</label>
-            </div>
-            <div class="select-item">
-                <input type="checkbox" name="select-item-input" id="item3" value="value3">
-                <label for="item3">check3</label>
-            </div>
+        <div class="child2" style="background-color: aquamarine;">
+                    dfgdfgdfgdfg
         </div>
-
-
     </div>
+    
 
 </body>
 
@@ -51,18 +68,26 @@
 <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
     function selectBoxClickListener() {
-        alert('this box is clicked');
+        let selectContentBox = document.getElementById('selectContentBox');
+        selectContentBox.style.display = 'block';
     }
 
     let selectBox = document.getElementById('selectTitleBox');
     let selectContentBox = document.getElementById('selectContentBox');
-    console.log(selectBox.id);
-    selectBox.addEventListener('mouseover', (event) => {
-        selectContentBox.style.display = 'block';
-    });
+    // console.log(selectBox.id);
+    // selectBox.addEventListener('mouseover', (event) => {
+    //     selectContentBox.style.display = 'block';
+    // });
     // selectBox.addEventListener('mouseout', (event) => {
     //     selectContentBox.style.display = 'none';
     // });
+
+    // see : https://codepen.io/wisesilver/pen/mdVmWzV
+    document.addEventListener('click', (event) => {
+        if($(event.target).parent('.select-box-container').length < 1) {
+            alert("outside");
+        }
+    });
 
 
     let checkboxes = document.getElementsByName('select-item-input');
