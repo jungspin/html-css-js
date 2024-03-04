@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .button-options .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row wrap;
+            border: solid 2px #adadad;
+            border-radius: 4px;
+        }
+
+        .button-options .content .label-layout {
+            height: 3vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content .label-layout {
+            padding: 2%;
+        }
+
+        .button-options .content .label-layout :is(p) {
+            display: grid;
+            place-content: center;
+            height: 100%;
+            color: #000000;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        /* .button-options .content .label-layout[for="italicInput"] {
+            border-left: solid 2px #adadad;
+            border-right: solid 2px #adadad;
+            min-width: 49px;
+        } */
+
+        .button-options .content input[type="checkbox"]:checked+.label-layout {
+            background-color: #af4b4b60;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button-options">
+        <div class="content">
+            <input type="checkbox" hidden="" id="italicInput" name="underlineInput" />
+            <label for="italicInput" class="label-layout">
+                <p>월</p>
+            </label>
+            <input type="checkbox" hidden="" id="italicInput2" name="underlineInput" />
+            <label for="italicInput2" class="label-layout">
+                <p>화</p>
+            </label>
+            <input type="checkbox" hidden="" id="italicInput3" name="underlineInput" />
+            <label for="italicInput3" class="label-layout">
+                <p>수</p>
+            </label>
+            <input type="checkbox" hidden="" id="italicInput4" name="underlineInput" />
+            <label for="italicInput4" class="label-layout">
+                <p>목</p>
+            </label>
+            <input type="checkbox" hidden="" id="italicInput5" name="underlineInput" />
+            <label for="italicInput5" class="label-layout">
+                <p>금</p>
+            </label>
+            <input type="checkbox" hidden="" id="italicInput6" name="underlineInput" />
+            <label for="italicInput6" class="label-layout">
+                <p>토</p>
+            </label>
+            <input type="checkbox" hidden="" id="italicInput7" name="underlineInput" />
+            <label for="italicInput7" class="label-layout">
+                <p>일</p>
+            </label>
+            <input type="checkbox" hidden="" id="italicInput8" name="underlineInput" />
+            <label for="italicInput8" class="label-layout">
+                <p>점심시간</p>
+            </label>
+            <input type="checkbox" hidden="" id="italicInput9" name="underlineInput" />
+            <label for="italicInput9" class="label-layout">
+                <p>공휴일</p>
+            </label>
+        </div>
+    </div>
+    <select name="sel" id="selDiv">
+        <option value="mon">mon</option>
+        <option value="tue">tue</option>
+        <option value="wed">wed</option>
+    </select>
+
+</body>
+
+</html>
