@@ -28,7 +28,7 @@
             position: absolute;
             z-index: 1;
             min-width: 200px;
-            background-color: #212121;
+            background-color: #f5f2f2;
             border: 2px solid #4CAF50;
             border-radius: 0px 15px 15px 15px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -74,9 +74,19 @@
     <div class="page-status-box">
         <button class="page-status-button">Paste &nbsp; ▼</button>
         <div class="page-status-content">
-            <a id="request" href="#" onclick="alert('ddd');">요청</a>
-            <a id="working" href="#">진행중</a>
-            <a id="complete" href="#">완료</a>
+            <div>
+                <input type="checkbox" id="request" />
+                <label for="request">요청</label>
+            </div>
+            <div>
+                <input type="checkbox" id="working" />
+                <label for="working">working</label>
+            </div>
+            <div>
+                <input type="checkbox" id="complete" />
+                <label for="complete">complete</label>
+            </div>
+
         </div>
     </div>
 
