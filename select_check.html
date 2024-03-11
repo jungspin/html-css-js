@@ -91,31 +91,36 @@
         <ul>
             <li class="option reserv-select-option">
                 <label for="selReservMon" class="reserv-day-label">
-                    <input type="checkbox" id="selReservMon" class="reserv-select-input" name="reserve-select-group" />
+                    <input type="checkbox" id="selReservMon" class="reserv-select-input" name="reserve-select-group"
+                        value="월요일" />
                     월요일
                 </label>
             </li>
             <li class="option reserv-select-option">
                 <label for="selReservTue" class="reserv-day-label">
-                    <input type="checkbox" id="selReservTue" class="reserv-select-input" name="reserve-select-group" />
+                    <input type="checkbox" id="selReservTue" class="reserv-select-input" name="reserve-select-group"
+                        value="화요일" />
                     화요일
                 </label>
             </li>
             <li class="option reserv-select-option">
                 <label for="selReservWed" class="reserv-day-label">
-                    <input type="checkbox" id="selReservWed" class="reserv-select-input" name="reserve-select-group" />
+                    <input type="checkbox" id="selReservWed" class="reserv-select-input" name="reserve-select-group"
+                        value="수요일" />
                     수요일
                 </label>
             </li>
             <li class="option reserv-select-option">
                 <label for="selReservThu" class="reserv-day-label">
-                    <input type="checkbox" id="selReservThu" class="reserv-select-input" name="reserve-select-group" />
+                    <input type="checkbox" id="selReservThu" class="reserv-select-input" name="reserve-select-group"
+                        value="목요일" />
                     목요일
                 </label>
             </li>
             <li class="option reserv-select-option">
                 <label for="selReservFri" class="reserv-day-label">
-                    <input type="checkbox" id="selReservFri" class="reserv-select-input" name="reserve-select-group" />
+                    <input type="checkbox" id="selReservFri" class="reserv-select-input" name="reserve-select-group"
+                        value="금요일" />
                     금요일
                 </label>
             </li>
@@ -161,17 +166,35 @@
         // targetElement.classList.forEach((item) => {
         //     console.log(item);
         // });
-        console.log("isOptionElement: " + isOptionElement);
-        console.log("isLiElement: " + isLiElement);
+        // console.log("isOptionElement: " + isOptionElement);
+        // console.log("isLiElement: " + isLiElement);
         if (isOptionElement) { // 옵션을 클릭한거면 해당 함수 호출
             // 체크된 것을 전달
-            let checkBoxes = document.getElementsByName('reserve-select-group');
+            // let checkBoxes = document.getElementsByName('reserve-select-group');
+            // checkBoxes.forEach((item) => {
+            //     if (item.checked) {
+            //         console.log(item.id);
+            //         let btn = document.getElementById('reservSelectButton');
+            //         btn.textContent += item.textContent;
+            //     }
+            // });
 
             //selectOption(targetElement);
         } else {
             toggleSelectBox(selectBox);
         }
 
+    });
+
+    // 라벨이든 인풋이든 선택하면 선택된 것이 버튼에 떠야함
+    let menuItems = document.getElementsByName('reserve-select-group');
+    menuItems.forEach((item) => {
+        item.addEventListener("click", function () {
+            if (item.checked) {
+                let btn = document.getElementById('reservSelectButton');
+                btn.textContent += item.value;
+            }
+        });
     });
 
     // selectBoxElements.forEach(selectBoxElement => {
